@@ -45,7 +45,10 @@ O modelo OSI em si não é uma arquitetura de rede, pois não especifica os serv
 
 - Camada 3 - Camada de Rede -> É responsavel pelo endereçamento, convertendo os enredeços lógicos (IP) em endereços físicos (Endereço MAC). Determina a rota para atingir o destino, baseada em fatores como condições de tráfego da rede e prioridade. O controle de congestionamento e a qualidade do serviço fornecido (retardo, tempo em trânsito, etc.) também são questões da camada de rede.
 
-@Annotation[QOS: Quality Of Service]
+    `@Annotation[QOS: Quality Of Service]` <br>
+    `@Annotation[MAC: Media Access Control - Endereço Físico]` <br>
+    `@Annotation[IP: Internet Protocol - Endereço Lógico]` <br>
 
-- Camada 2 - Camada de Link de Dados -> É responsável por ligar dados em outros dados. Quando o receptor recebe um quadro, a sua camada de Link de dDados confere se o dado chegou Íntegro, refazendo o checksum ou CRC (Cyclical Rendundancy Check). Se os dados estão o.k, ele envia uma confirmação de recebimento, chamada acknowledge (reconhecimento) ou simplementes ack. Caso essa confirmação não seja recebida, a camada Link de Dados do transmissor reenvia o quadro, já que o quadro não chegou até o receptor ou chegou com os dados corrompidos.
+- Camada 2 - Camada de Link de Dados -> É responsável por ligar dados em outros dados. Quando o receptor recebe um quadro, a sua camada de Link de dDados confere se o dado chegou Íntegro, refazendo o checksum ou CRC (Cyclical Rendundancy Check). Se os dados estão o.k, ele envia uma confirmação de recebimento, chamada acknowledge (reconhecimento) ou simplementes ack. Caso essa confirmação não seja recebida, a camada Link de Dados do transmissor reenvia o quadro, já que o quadro não chegou até o receptor ou chegou com os dados corrompidos. Se a fonte for confiável, o receptor enviara um quadro de confirmação do recebimento para o micro de origem.
 
+- Camada 1 - Camada Física -> Trata a transmissão de bits brutos por meio de transmissão (ex: par-trançado). O projeto da rede garantir que, quando um lado enviar um bit 1, o outro lado o receberá como um bit 1, não como um bit 0.
