@@ -44,3 +44,8 @@ O modelo OSI em si não é uma arquitetura de rede, pois não especifica os serv
 - Camada 4 - Camada de Transporte -> É responsavel por pegar os dados enviados pela camada de sessão e quebrar em pacotes. Após isso, os pacotes são colocados em ordem para envio. A máquina receptora remonta os pacotes e se estiverem fora de ordem, ela as coloca em ordem novamente antes de enviá-los a caada de sessão.
 
 - Camada 3 - Camada de Rede -> É responsavel pelo endereçamento, convertendo os enredeços lógicos (IP) em endereços físicos (Endereço MAC). Determina a rota para atingir o destino, baseada em fatores como condições de tráfego da rede e prioridade. O controle de congestionamento e a qualidade do serviço fornecido (retardo, tempo em trânsito, etc.) também são questões da camada de rede.
+
+@Annotation[QOS: Quality Of Service]
+
+- Camada 2 - Camada de Link de Dados -> É responsável por ligar dados em outros dados. Quando o receptor recebe um quadro, a sua camada de Link de dDados confere se o dado chegou Íntegro, refazendo o checksum ou CRC (Cyclical Rendundancy Check). Se os dados estão o.k, ele envia uma confirmação de recebimento, chamada acknowledge (reconhecimento) ou simplementes ack. Caso essa confirmação não seja recebida, a camada Link de Dados do transmissor reenvia o quadro, já que o quadro não chegou até o receptor ou chegou com os dados corrompidos.
+
